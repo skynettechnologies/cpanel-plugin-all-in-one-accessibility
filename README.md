@@ -1,0 +1,1 @@
+# cpanel-plugin-all-in-one-accessibility
