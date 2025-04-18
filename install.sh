@@ -6,7 +6,7 @@ THEMENAME="$1"
 fi
 
 FRONTEND_BASE="/usr/local/cpanel/base/frontend/$THEMENAME/all_in_one_accessibility"
-ALLINONEACCESSIBILITY_BASE="/usr/local/cpanel/3rdparty/bin/all_in_one_accessibility/plugin"
+ALLINONEACCESSIBILITY_BASE="/usr/local/cpanel/3rdparty/bin/cpanel-plugin-all_in_one_accessibility/plugin"
 PLUGIN_BASE="$ALLINONEACCESSIBILITY_BASE/frontend"
 
 #   remove previous
@@ -18,14 +18,14 @@ mkdir -p "$FRONTEND_BASE"
 mkdir -p "$PLUGIN_BASE"
 
 #   download plugin
-git clone https://github.com/skynettechnologies/cpanel-plugin-all-in-one-accessibility.git
+#git clone https://github.com/skynettechnologies/cpanel-plugin-all-in-one-accessibility.git
 
 
 #   DUMP everything
-cp -r all_in_one_accessibility-cpanel-plugin/* "$ALLINONEACCESSIBILITY_BASE"
+cp -r cpanel-plugin-all_in_one_accessibility/* "$ALLINONEACCESSIBILITY_BASE"
 
 #   copy frontend
-#cp -r all_in_one_accessibility-cpanel-plugin/frontend/* "$PLUGIN_BASE"
+cp -r cpanel-plugin-all_in_one_accessibility/frontend/* "$PLUGIN_BASE"
 ln -s "$PLUGIN_BASE" "$FRONTEND_BASE"
 
 #   do hook for new accounts auto-install
@@ -34,16 +34,16 @@ ln -s "$PLUGIN_BASE" "$FRONTEND_BASE"
 #$INSTALL_FILENAME
 
 #   uninstall
-/usr/local/cpanel/scripts/uninstall_plugin /usr/local/cpanel/3rdparty/bin/all_in_one_accessibility/plugin/configuration --theme="$THEMENAME"
+/usr/local/cpanel/scripts/uninstall_plugin /usr/local/cpanel/3rdparty/bin/cpanel-plugin-all_in_one_accessibility/plugin/configuration --theme="$THEMENAME"
 
 #   install
-/usr/local/cpanel/scripts/install_plugin /usr/local/cpanel/3rdparty/bin/all_in_one_accessibility/plugin/configuration --theme "$THEMENAME"
+/usr/local/cpanel/scripts/install_plugin /usr/local/cpanel/3rdparty/bin/cpanel-plugin-all_in_one_accessibility/plugin/configuration --theme "$THEMENAME"
 
 #   make required files executable
-#CRON_SCRIPT_PATH="/usr/local/cpanel/3rdparty/bin/all_in_one_accessibility/plugin/cron.sh"
-#UPDATE_SCRIPT_PATH="/usr/local/cpanel/3rdparty/bin/all_in_one_accessibility/plugin/update.sh"
-INSTALLER_SCRIPT_PATH="/usr/local/cpanel/3rdparty/bin/all_in_one_accessibility/plugin/install.sh"
-UNINSTALLER_SCRIPT_PATH="/usr/local/cpanel/3rdparty/bin/all_in_one_accessibility/plugin/uninstall.sh"
+#CRON_SCRIPT_PATH="/usr/local/cpanel/3rdparty/bin/cpanel-plugin-all_in_one_accessibility/plugin/cron.sh"
+#UPDATE_SCRIPT_PATH="/usr/local/cpanel/3rdparty/bin/cpanel-plugin-all_in_one_accessibility/plugin/update.sh"
+INSTALLER_SCRIPT_PATH="/usr/local/cpanel/3rdparty/bin/cpanel-plugin-all_in_one_accessibility/plugin/install.sh"
+UNINSTALLER_SCRIPT_PATH="/usr/local/cpanel/3rdparty/bin/cpanel-plugin-all_in_one_accessibility/plugin/uninstall.sh"
 
 #chmod 755 $CRON_SCRIPT_PATH
 #chmod 755 $UPDATE_SCRIPT_PATH
