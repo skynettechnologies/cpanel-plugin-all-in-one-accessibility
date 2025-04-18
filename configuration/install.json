@@ -1,0 +1,20 @@
+[
+    {
+        "order":"1",
+        "type":"group",
+        "id":"all_in_one_accessibility",
+        "name":"All in One Accessibility"
+    },
+    {
+        "order":"1",
+        "uri":"all_in_one_accessibility/frontend/index.php",
+        "icon":"all_in_one_accessibility.png",
+        "group_id":"software",
+        "type":"link",
+        "featuremanager":true,
+        "target":"_blank",
+        "name":"All in One Accessibility",
+        "id":"all_in_one_accessibility"
+    }
+
+]
