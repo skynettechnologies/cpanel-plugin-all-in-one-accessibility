@@ -22,10 +22,10 @@ mkdir -p "$PLUGIN_BASE"
 
 
 #   DUMP everything
-cp -r cpanel-plugin-all_in_one_accessibility/* "$ALLINONEACCESSIBILITY_BASE"
+cp -r /* "$ALLINONEACCESSIBILITY_BASE"
 
 #   copy frontend
-cp -r cpanel-plugin-all_in_one_accessibility/frontend/* "$PLUGIN_BASE"
+cp -r frontend/* "$PLUGIN_BASE"
 ln -s "$PLUGIN_BASE" "$FRONTEND_BASE"
 
 #   do hook for new accounts auto-install
