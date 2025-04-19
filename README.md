@@ -49,7 +49,6 @@ Step 6:
 `rm -rf /usr/local/cpanel/3rdparty/bin/cpanel-plugin-all-in-one-accessibility`
 
 
-Run install.sh on servers that run cPanel & WHM version 11.44 and later. install.sh must be run as root to work. Script copies installation files to /usr/local/cpanel/3rdparty/bin/all_in_one_accessibility/plugin/
 
 UNINSTALL
 ---------------------
