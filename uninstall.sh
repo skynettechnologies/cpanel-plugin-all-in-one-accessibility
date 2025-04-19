@@ -5,6 +5,6 @@ then
 THEMENAME="$1"
 fi
 
-/usr/local/cpanel/scripts/uninstall_plugin /usr/local/cpanel/3rdparty/bin/cpanel-plugin-all_in_one_accessibility/configuration --theme="$THEMENAME"
-rm -rf /usr/local/cpanel/3rdparty/bin/cpanel-plugin-all_in_one_accessibility/
+/usr/local/cpanel/scripts/uninstall_plugin /usr/local/cpanel/3rdparty/bin/cpanel-plugin-all-in-one-accessibility/configuration --theme="$THEMENAME"
+rm -rf /usr/local/cpanel/3rdparty/bin/cpanel-plugin-all-in-one-accessibility/
 rm -rf /usr/local/cpanel/base/frontend/$THEMENAME/all_in_one_accessibility/frontend
