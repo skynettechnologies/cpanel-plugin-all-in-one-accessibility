@@ -1,6 +1,7 @@
 #!/bin/bash
 THEMENAME="jupiter"
-if [ "$1" ]
+echo "p1 $1"
+if [$1]
 then
   THEMENAME="$1"
 fi
