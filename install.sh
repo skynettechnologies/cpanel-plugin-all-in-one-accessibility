@@ -2,7 +2,7 @@
 THEMENAME="jupiter"
 if [ "$1" ]
 then
-THEMENAME="$1"
+  THEMENAME="$1"
 fi
 #FRONTEND_BASE="/usr/local/cpanel/base/frontend/$THEMENAME/all_in_one_accessibility"
 #install
