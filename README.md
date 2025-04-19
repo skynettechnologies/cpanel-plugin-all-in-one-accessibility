@@ -20,14 +20,49 @@ FEATURES
 
 INSTALLATION
 ---------------------
+Run the following commands as root on the terminal to install the plugin.
+
+Step 1:
+
+`cd /usr/local/cpanel/3rdparty/bin`
+
+Step 2:
+
+`rm -rf /usr/local/cpanel/base/frontend/jupiter/all_in_one_accessibility`
+
+Step 3:
+
+`git clone https://github.com/skynettechnologies/cpanel-plugin-all-in-one-accessibility.git`
+
+Step 4:
+
+`/usr/local/cpanel/scripts/install_plugin /usr/local/cpanel/3rdparty/bin/cpanel-plugin-all-in-one-accessibility/configuration`
+
+Step 5:
+
+`cp -r cpanel-plugin-all-in-one-accessibility/frontend/ /usr/local/cpanel/base/frontend/jupiter/all_in_one_accessibility`
+
+`cp -r cpanel-plugin-all-in-one-accessibility/configuration /usr/local/cpanel/base/frontend/jupiter/all_in_one_accessibility`
+
+Step 6:
+
+`rm -rf /usr/local/cpanel/3rdparty/bin/cpanel-plugin-all-in-one-accessibility`
+
+
 Run install.sh on servers that run cPanel & WHM version 11.44 and later. install.sh must be run as root to work. Script copies installation files to /usr/local/cpanel/3rdparty/bin/all_in_one_accessibility/plugin/
 
 UNINSTALL
 ---------------------
-Run uninstall.sh on the server to uninstall All In One Accessibility cPanel Plugin. Script is usually located on /usr/local/cpanel/3rdparty/bin/all_in_one_accessibility/plugin/uninstall.sh. Run the following commands as root on the terminal to uninstall the plugin:
+Run the following commands as root on the terminal to uninstall the plugin:
 
-`UNINSTALLER="usr/local/cpanel/3rdparty/bin/all_in_one_accessibility/plugin/uninstall.sh"`
+Step 1:
 
-`chmod 755 $UNINSTALLER`
+`cd /usr/local/cpanel/scripts`
 
-`$UNINSTALLER`
+Step 2:
+
+`/usr/local/cpanel/scripts/uninstall_plugin /usr/local/cpanel/base/frontend/jupiter/all_in_one_accessibility/configuration`
+
+Step 3:
+
+`rm -rf /usr/local/cpanel/base/frontend/jupiter/all_in_one_accessibility`
