@@ -96,7 +96,17 @@ fetchApiData($domain, $username, $email);
 ?>
     <link href="bootstrap.min.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
-
+    <div class="mb-3 ms-1 row" id="">
+        <h3 class="col-sm-1 col-form-label">Domain:</h3>
+        <div class="col-sm-3">
+            <select style="height:auto" class="form-control" id="aio_domain" name="aio_domain"><?php
+                foreach ($domains as $dk =>  $dv) {
+                    ?><option value="<?php echo base64_encode($dv);?>" <?php echo ($dv==$domain)?'selected':'';?>><?php echo $dv;?></option><?php
+                }
+            ?></select>
+        </div>
+        <p>Please select the domain you would like to use for All in One Accessibility.</p>
+    </div>
     <div class="panel panel-default aioa-settings-panel">
         <div class="panel-body">
             <input type="hidden" id="username" name="username" value="<?php echo htmlspecialchars($username); ?>" />
