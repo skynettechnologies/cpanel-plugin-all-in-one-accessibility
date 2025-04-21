@@ -96,6 +96,100 @@ fetchApiData($domain, $username, $email);
 ?>
     <link href="bootstrap.min.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+        body{
+            font-family: "Roboto", sans-serif;
+        }
+        h1{
+            font-family: "Rubik", sans-serif;
+        }
+        .aioa-cancel-button {
+            text-decoration: none;
+            display: inline-block;
+            vertical-align: middle;
+            border: 2px solid #420083;
+            border-radius: 4px;
+            background-color: #420083;
+            box-shadow: 0px 0px 2px 0px #333333;
+            color: #ffffff;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .aioa-cancel-button:hover {
+            border-color: #420083;
+            background-color: white;
+            box-shadow: 0px 0px 2px 0px #333333;
+            color:black;
+        }
+        .aioa-cancel-button:hover .mb-text {
+            color: #420083;
+        }
+        .aioa-settings-panel .icon input[type=radio] +label{
+            width: 130px;
+            height: 130px;
+            padding: 10px !important;
+            text-align: center;
+            background-color: #f7f9ff;
+            outline: 4px solid #f7f9ff;
+            outline-offset: -4px;
+            border-radius: 10px;
+            background: #420083;
+        }
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .spinner {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-content img {
+            max-width: 510px; /* Adjust image size */
+            height: auto;
+        }
+        /* Rest of your styles */
+        .all-in-one-accessibility-wrap .accessibility-settings .all-one-accessibility-form .icon-size-wrapper .option, .all-in-one-accessibility-wrap .accessibility-settings .all-one-accessibility-form .icon-type-wrapper .option {
+            width: 130px;
+            height: 130px;
+            padding: 10px !important;
+            text-align: center;
+            background-color: #420083;
+            outline: 4px solid #fff;
+            outline-offset: -4px;
+            border-radius: 10px;
+        }
+        .all-in-one-accessibility-wrap .accessibility-settings .all-one-accessibility-form {
+            margin: 0 auto 40px;
+            border-radius: 19px;
+            background: #e9efff;
+            padding: 48px 22px 13px 98px;
+        }
+    </style>
     <div class="mb-3 ms-1 row" id="">
         <h3 class="col-sm-1 col-form-label">Domain:</h3>
         <div class="col-sm-3">
@@ -304,7 +398,7 @@ fetchApiData($domain, $username, $email);
                                                      ?><div class="col-auto mb-30">
                                                          <div
                                                                  class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-position form-item-position">
-                                                             <input type="radio" id="edit-type-<?php echo $it;?>" checked="" name="aioa_icon_type-<?php echo $it;?>"
+                                                             <input type="radio" id="edit-type-<?php echo $it;?>" <?php echo ($it==1)?' checked':''?> name="aioa_icon_type-<?php echo $it;?>"
                                                                     value="aioa-icon-type-<?php echo $it;?>" class="form-radio" />
                                                              <label for="edit-type-<?php echo $it;?>" class="option">
                                                                  <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-<?php echo $it;?>.svg"
