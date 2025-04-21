@@ -398,7 +398,7 @@ fetchApiData($domain, $username, $email);
                                                      ?><div class="col-auto mb-30">
                                                          <div
                                                                  class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-position form-item-position">
-                                                             <input type="radio" id="edit-type-<?php echo $it;?>" <?php echo ($it==1)?' checked':''?> name="aioa_icon_type-<?php echo $it;?>"
+                                                             <input type="radio" id="edit-type-<?php echo $it;?>" <?php echo ($it==1)?' checked':''?> name="aioa_icon_type"
                                                                     value="aioa-icon-type-<?php echo $it;?>" class="form-radio" />
                                                              <label for="edit-type-<?php echo $it;?>" class="option">
                                                                  <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-<?php echo $it;?>.svg"
