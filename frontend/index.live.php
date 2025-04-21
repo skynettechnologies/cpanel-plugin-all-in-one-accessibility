@@ -187,7 +187,7 @@ fetchApiData($domain, $username, $email);
             margin: 0 auto 40px;
             border-radius: 19px;
             background: #e9efff;
-            padding: 48px 22px 13px 98px;
+            padding: 10px 40px 10px 40px;
         }
     </style>
     <div class="mb-3 ms-1 row" id="">
@@ -199,7 +199,7 @@ fetchApiData($domain, $username, $email);
                 }
             ?></select>
         </div>
-        <p>Please select the domain you would like to use for All in One Accessibility.</p>
+        <p class="mt-2">Please select the domain you would like to use for All in One Accessibility.</p>
     </div>
     <div class="panel panel-default aioa-settings-panel">
         <div class="panel-body">
@@ -211,17 +211,6 @@ fetchApiData($domain, $username, $email);
                         <div class="all-in-one-accessibility-wrap">
                             <div class="accessibility-settings">
                                 <div class="all-one-accessibility-form">
-                                    <p>Please select the domain you would like to use for All in One Accessibility.</p>
-                                    <div class="mb-3 row " id="colorcode_html">
-                                        <h3 class="col-sm-3 col-form-label">Domain:</h3>
-                                        <div class="col-sm-9">
-                                            <select style="height:auto" class="form-control" id="aio_domain" name="aio_domain"><?php
-                                                foreach ($domains as $dk =>  $dv) {
-                                                 ?><option value="<?php echo base64_encode($dv);?>" <?php echo ($dv==$domain)?'selected':'';?>><?php echo $dv;?></option><?php
-                                                }
-                                            ?></select>
-                                        </div>
-                                    </div>
                                     <div class="all-one-accessibility-form-inner">
                                         <form id="widget-form" name="widget-form" class="form-controler">
 
