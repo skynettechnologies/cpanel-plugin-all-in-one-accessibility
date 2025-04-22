@@ -47,7 +47,7 @@ function fetchApiData($domain, $username, $email) {
         'payment_source' => ''
     ];
     
-    $apiUrl = "https://ada.skynettechnologies.us/api/get-autologin-link";
+    $apiUrl = "https://ada.skynettechnologies.us/api/get-autologin-link-new";
     
     // Prepare the POST request
     $response = sendPostRequest($apiUrl, ['website' => $website_name]);
