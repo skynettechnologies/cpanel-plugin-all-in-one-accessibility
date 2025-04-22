@@ -200,6 +200,26 @@ fetchApiData($domain, $username, $email);
             ?></select>
         </div>
         <p class="mt-2">Please select the domain you would like to use for All in One Accessibility.</p>
+         <div class="aioa_dashboard-copy-widget-code card">
+            <div class="card-body">
+                <div class="mb-2"><strong>Step 01</strong> : Copy the code</div>
+                <div class="mb-3"><strong>Step 02</strong> : Insert it into website footer</div>
+                <div class="aioa_dashboard-widget-code">
+                    <div class="aioa_dashboard-widget-code-copy-btn"></div>
+                    <pre id="aio_advance_code" style="font-size: 1rem;margin: 0;padding: 1rem 5rem 1rem 1rem;white-space: break-spaces;word-break: break-all;">&lt;script&gt;setTimeout(() =&gt; { let aioa_script_tag = document.createElement("script"); aioa_script_tag.src = "https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=#420083&amp;token=&amp;position=bottom_right";  aioa_script_tag.id = "aioa-adawidget";aioa_script_tag.defer="true"; document.getElementsByTagName("body")[0].appendChild(aioa_script_tag); }, 3000);&lt;/script&gt;</pre>
+                    <pre id="aio_normal_code" class="hide"  style="font-size: 1rem;margin: 0;padding: 1rem 5rem 1rem 1rem;white-space: break-spaces;word-break: break-all;">&lt;script id="aioa-adawidget" src="https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?colorcode=#420083&amp;token=&amp;position=bottom_right" defer&gt;&lt;/script&gt;</pre>
+                </div>
+                <div class="aioa_dashboard-widget-code-toggle-header">
+                    <div class="aioa_dashboard-widget-code-toggle">
+                        <div class="form-check">
+                            <input type="checkbox" id="aio-code-switch" class="form-check-input" checked="" aria-checked="true">
+                            <label title="" for="code-switch" class="form-check-label">Advance Code</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="panel panel-default aioa-settings-panel">
         <div class="panel-body">
@@ -1093,6 +1113,16 @@ fetchApiData($domain, $username, $email);
         $('input[name="aioa_icon_size"]').change(function () {
             var icon_size = document.querySelector('input[name="aioa_icon_size"]:checked').value;
 
+        });
+        $("#aio-code-switch").click(function () {
+            var aio_code_switch = $(this).is(":checked") ? 1 : 0; // Update the value
+            if (aio_code_switch === 1) {
+                $("#aio_advance_code").removeClass("hide");
+                $("#aio_noraml_code").addClass("hide");
+            } else {
+                $("#aio_advance_code").addClass("hide");
+                $("#aio_noraml_code").removeClass("hide");
+            }
         });
         // Set the initial server name and display it
         document.addEventListener('DOMContentLoaded', function() {
