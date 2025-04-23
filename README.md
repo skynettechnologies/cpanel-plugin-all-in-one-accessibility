@@ -155,8 +155,8 @@ Run the following commands as root on the terminal to install the plugin.
 ## Active and Configuration
 
 1. Go to the Cpanel Tools > Software Tab.
-2. Click on All in One Accessibility Plugin.
-3. Go the plugin configure All in One Accessibility the way you like. You can change the widget color & position.
+2. Go to the All in One Accessibility Plugin and follow the code integration steps.
+3. Now configure All in One Accessibility the way you like. You can change the widget color & position.
    
 ## Uninstall Plugin
 
