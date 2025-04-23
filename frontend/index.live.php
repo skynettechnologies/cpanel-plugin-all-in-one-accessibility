@@ -1,7 +1,7 @@
 <?php
 include("/usr/local/cpanel/php/cpanel.php");  // Instantiate the CPANEL object.
 $cpanel = new CPANEL();                       // Connect to cPanel - only do this once.
-print $cpanel->header( "All In One Accessibility" );      // Add the header.
+print $cpanel->header( "All In One Accessibility®" );      // Add the header.
 function get_user_domains(){
     /**
      * Helper script to wrap fetching all of the cPanel user's domains.
