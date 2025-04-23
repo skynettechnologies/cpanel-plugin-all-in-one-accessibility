@@ -649,7 +649,7 @@ fetchApiData($domain, $username, $email);
 
             console.log('Details to send:', arrDetails);
 
-            const apiUrl = "https://ada.skynettechnologies.us/api/get-autologin-link";
+            const apiUrl = "https://ada.skynettechnologies.us/api/get-autologin-link-new";
             console.log("website url"+website_name);
             // Prepare the POST request
             fetch(apiUrl, {
@@ -1118,10 +1118,10 @@ fetchApiData($domain, $username, $email);
             var aio_code_switch = $(this).is(":checked") ? 1 : 0; // Update the value
             if (aio_code_switch === 1) {
                 $("#aio_advance_code").removeClass("hide");
-                $("#aio_noraml_code").addClass("hide");
+                $("#aio_normal_code").addClass("hide");
             } else {
                 $("#aio_advance_code").addClass("hide");
-                $("#aio_noraml_code").removeClass("hide");
+                $("#aio_normal_code").removeClass("hide");
             }
         });
         // Set the initial server name and display it
