@@ -269,7 +269,3 @@ This addon is developed and maintained by **[Skynet Technologies USA LLC](https:
 ## Current Maintainers
 
 - **[Skynet Technologies USA LLC](https://github.com/skynettechnologies)**
-
-## License
-
-[MIT](LICENSE) © Skynet Technologies USA LLC
